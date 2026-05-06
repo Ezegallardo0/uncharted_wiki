@@ -1,6 +1,21 @@
 @import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap");
 
+:root {
+  --bg: #f7f7f7;
+  --text: #000000;
+}
 
+.dark-mode {
+  --bg: #16171d;
+  --text: #ffffff;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+   transition: background 0.3s ease, color 0.3s ease;
+}
 .menu {
   display: flex;
   align-items: center;
@@ -23,7 +38,6 @@
 .link-underline {
   position: relative;
   text-decoration: none;
-  color: white;
 }
 
 .link-underline::after {
@@ -50,15 +64,15 @@
   position: absolute;
   top: 100%;
   left: 0;
-  min-width: 200px;
+
+  min-width: 220px;
   padding: 10px;
-  margin-top: 12px;
-   background-color: #16171d;
-  box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.3);
-  border-radius: 8px;
-  z-index: 10;
+
+  background: var(--dropdown-bg); /* 🔥 esto es lo importante */
+  border-radius: 10px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+
   opacity: 0;
-  visibility: hidden;
   transform: translateY(-10px) scale(0.95);
 
   transition: all 0.25s ease;
@@ -68,7 +82,6 @@
   display: block;
   padding: 8px;
   font-size: 18px;
-  color: white;
   text-decoration: none;
   border: 1px solid transparent;
   border-radius: 6px;
@@ -77,11 +90,45 @@
 
 .content a:hover {
   border: 1px solid red;
-  background-color: #16171d;
 }
 
 .dropdown:hover .content {
   opacity: 1;
   visibility: visible;
   transform: translateY(0) scale(1);
+}
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.Tema {
+  width: 44px;
+  height: 44px;
+  border: 1px solid rgba(255,255,255,0.15);
+  border-radius: 12px;
+  background-color: #81818230;
+  color: var(--text, #fff);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  cursor: pointer;
+
+  transition: all 0.2s ease;
+}
+
+.Tema:hover {
+  transform: translateY(-2px);
+  border-color: rgb(52, 89, 83);
+}
+
+.Tema:active {
+  transform: scale(0.96);
+}
+
+.Tema svg {
+  width: 20px;
+  height: 20px;
 }

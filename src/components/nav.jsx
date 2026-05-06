@@ -5,14 +5,7 @@ const Menu = () => {
   const [dark, setDark] = useState(false);
 
   useEffect(() => {
-    const container = document.getElementById("container");
-    if (!container) return;
-
-    if (dark) {
-      container.classList.add("dark-mode");
-    } else {
-      container.classList.remove("dark-mode");
-    }
+    document.body.classList.toggle("dark-mode", dark);
   }, [dark]);
   return (
     <div className="menu">
@@ -33,7 +26,6 @@ const Menu = () => {
               Explorar
             </a>
           </li>
-
           <div className="dropdown">
             <a href="#" className="link-underline">
               Saga Uncharted
@@ -51,8 +43,8 @@ const Menu = () => {
               Comprar
             </a>
           </li>
-          <div className="container" id="container">
-            <button onClick={() => setDark(!dark)}>
+          <div className="container">
+            <button className="Tema" onClick={() => setDark(prev => !prev)}>
               {dark ? (
                 <svg
                   xmlns="http://www.w3.org/2000/svg"

@@ -1,11 +1,14 @@
-import Menu from './components/nav'
+import {Route, Routes} from 'react-router-dom'
 import './styles/App.css'
+import Inicio from './pages/home'
 
 function App() {
 
   return (
     <>
-    <Menu />
+    <Routes>
+      <Route  path="/" element={<Inicio/>} />
+    </Routes>
     </>
   )
 }

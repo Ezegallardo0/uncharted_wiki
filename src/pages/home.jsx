@@ -1,10 +1,11 @@
+import Menu from "../components/nav"
 
-const home = () => {
+const Inicio = () => {
   return (
     <div>
-      
+      <Menu />
     </div>
   )
 }
 
-export default home
+export default Inicio

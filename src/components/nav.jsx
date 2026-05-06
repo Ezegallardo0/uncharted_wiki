@@ -1,4 +1,5 @@
 import "../styles/nav.css";
+import { Link } from "react-router-dom";
 import { useState, useEffect } from "react";
 
 const Menu = () => {
@@ -17,9 +18,7 @@ const Menu = () => {
       <div>
         <ul className="nav">
           <li>
-            <a className="link-underline" href="">
-              Inicio
-            </a>
+            <Link className="link-underline" to="/">Inicio</Link>
           </li>
           <li>
             <a className="link-underline" href="">

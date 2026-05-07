@@ -1,144 +1,61 @@
-@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Crimson+Pro:ital,wght@0,300;0,400;1,300&display=swap');
+:root {
+  --card-bg: #f9f9f9;
+  --card-text: #000;
+  --box-shadow-color: rgba(0, 0, 0, 0.15); /* Sombra clara */
+}
 
-.uncharted-container {
-  position: relative;
-  font-family: 'Crimson Pro', Georgia, serif;
-  background: #2b1f0e;
-  background-image:
-    repeating-linear-gradient(0deg, transparent, transparent 28px, rgba(255,220,120,0.03) 29px),
-    repeating-linear-gradient(90deg, transparent, transparent 28px, rgba(255,220,120,0.03) 29px);
-  color: #e8d9b8;
-  width: 820px;
+.dark-mode {
+  --card-bg: #16171d;
+  --card-text: #fff;
+  --box-shadow-color: rgba(255, 255, 255, 0.15); /* Sombra clara */
+}
+
+.main-card {
+  background-color: var(--card-bg);
+  color: var(--card-text);
+  border-radius: 20px;
+  padding: 60px;
   margin: 40px auto;
-  display: flex;
-  align-items: stretch;
-  gap: 0;
-  border: 1px solid #7a5c2e;
-  border-radius: 6px;
-  overflow: visible;
-  box-shadow:
-    0 0 0 1px #1a1108,
-    0 20px 60px rgba(0,0,0,0.7),
-    inset 0 1px 0 rgba(255,200,80,0.15);
+  max-width: 1000px;
+  box-shadow: 0 6px 15px var(--box-shadow-color); /* Sombra dinámica */
 }
 
-.uncharted-container::before {
-  content: '';
-  position: absolute;
-  inset: 4px;
-  border: 1px solid rgba(180,140,60,0.2);
-  border-radius: 3px;
-  pointer-events: none;
-}
-
-/* Franja lateral dorada */
-.uncharted-container::after {
-  content: '';
-  position: absolute;
-  left: 0; top: 0; bottom: 0;
-  width: 5px;
-  background: linear-gradient(to bottom, #c8962a, #7a5c1a, #c8962a);
-}
-
-.info {
-  flex: 1;
-  padding: 28px 28px 28px 36px;
+.cards-container {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  gap: 40px;
 }
 
-.info h1 {
-  font-family: 'Cinzel', serif;
+.card {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  background-color: var(--card-bg);
+  color: var(--card-text);
+  border-radius: 10px;
+  padding: 30px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-7px);
+  box-shadow: 0 10px 20px var(--box-shadow-color); /* Sombra más intensa en hover */
+}
+
+.card h2 {
   font-size: 28px;
-  font-weight: 700;
-  line-height: 1.1;
-  color: #f0dfa0;
-  margin: 0 0 8px;
-  text-shadow: 0 1px 8px rgba(0,0,0,0.6);
+  margin-bottom: 10px;
 }
 
-.info p {
-  font-size: 20px;
-  line-height: 1.75;
-  color: #cbbf9e;
-  font-weight: 300;
-  font-style: italic;
-  max-width: 420px;
-  margin: 0;
+.card p {
+  font-size: 16px;
+  line-height: 1.2;
+  padding-right: 50%; /* Texto comprimido */
 }
 
-.info h2 {
-  margin-top: 22px;
-  font-family: 'Cinzel', serif;
-  font-size: 11px;
-  letter-spacing: 2px;
-  color: #c8962a;
-  text-transform: uppercase;
-  display: inline-flex;
-  align-items: center;
-  gap: 10px;
-  cursor: pointer;
-  transition: gap 0.3s, color 0.3s;
-}
-
-.info h2:hover {
-  gap: 16px;
-  color: #f0dfa0;
-}
-
-.uncharted-container img {
-  width: 220px;
-  height: 300px;
+.card img {
+  width: 250px;
+  height: 250px;
   object-fit: cover;
-  display: block;
-  flex-shrink: 0;
-  align-self: center;
-  margin: 24px 28px 24px 0;
-  border-radius: 2px;
-  filter: sepia(20%) contrast(1.05);
-  box-shadow: 0 8px 30px rgba(0,0,0,0.5);
-  transition: filter 0.4s;
-}
-
-.uncharted-container img:hover {
-  filter: sepia(0%) contrast(1.1);
-}
-@keyframes cardReveal {
-  from { opacity: 0; transform: translateY(32px) scale(0.97); }
-  to   { opacity: 1; transform: translateY(0) scale(1); }
-}
-
-@keyframes stripeGrow {
-  from { transform: scaleY(0); }
-  to   { transform: scaleY(1); }
-}
-
-@keyframes fadeUp {
-  from { opacity: 0; transform: translateY(14px); }
-  to   { opacity: 1; transform: translateY(0); }
-}
-
-@keyframes imgReveal {
-  from { opacity: 0; transform: translateX(20px) scale(0.96); }
-  to   { opacity: 1; transform: translateX(0) scale(1); }
-}
-
-@keyframes lineExpand {
-  from { width: 0; }
-  to   { width: 60px; }
-}
-.uncharted-container {
-  animation: cardReveal 0.7s cubic-bezier(0.22, 1, 0.36, 1) both;
-}
-
-.info h1 {
-  animation: fadeUp 0.55s ease both;
-  animation-delay: 0.55s;
-  opacity: 0;
-}
-
-.uncharted-container img {
-  animation: imgReveal 0.75s cubic-bezier(0.22, 1, 0.36, 1) 0.4s both;
-  opacity: 0;
+  margin-left: 30px;
 }

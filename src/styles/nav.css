@@ -19,6 +19,8 @@ body {
 .menu {
   display: flex;
   align-items: center;
+  position: relative;
+  z-index: 100;
 }
 
 .img {
@@ -58,24 +60,23 @@ body {
 
 .dropdown {
   position: relative;
+  z-index: 200;
 }
 
 .content {
-  position: absolute;
+ position: absolute;
   top: 100%;
   left: 0;
-
   min-width: 220px;
   padding: 10px;
-
-  background: var(--dropdown-bg); /* 🔥 esto es lo importante */
+  background: var(--bg);
   border-radius: 10px;
   box-shadow: 0 10px 25px rgba(0,0,0,0.3);
-
-  opacity: 0;
   transform: translateY(-10px) scale(0.95);
-
   transition: all 0.25s ease;
+  opacity: 0;           /* ← faltaba esto */
+  pointer-events: none; /* ← y esto, para que no interfiera cuando está cerrado */
+  z-index: 300;      
 }
 
 .content a {
@@ -94,8 +95,8 @@ body {
 
 .dropdown:hover .content {
   opacity: 1;
-  visibility: visible;
   transform: translateY(0) scale(1);
+  pointer-events: auto;
 }
 .container {
   display: flex;

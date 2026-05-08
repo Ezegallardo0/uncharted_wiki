@@ -62,7 +62,7 @@
 }
 
 .hero-button {
-  background: var(--text);
+  background-color: wheat;
   color: #000000;
   box-shadow: 0 8px 24px rgba(212, 155, 59, 0.25);
 }
@@ -85,8 +85,8 @@
 .hero-banner {
   min-height: 420px;
   border-radius: 32px;
-  background: linear-gradient(180deg, rgba(11, 16, 30, 0.82) 0%, rgba(10, 14, 22, 0.45) 100%),
-    url("https://static.wikia.nocookie.net/unchartedpedia/images/6/65/Drake%27s_Fortune_3.png/revision/latest?cb=20121223234620&path-prefix=es") center/cover no-repeat;
+  background: linear-gradient(180deg, rgba(11, 16, 30, 0.495) 0%, rgba(10, 14, 22, 0.518) 100%),
+    url("https://tierragamer.com/wp-content/uploads/2022/09/portada-top-uncharted.jpg") center/cover no-repeat;
   box-shadow: 0 30px 70px rgba(0, 0, 0, 0.24);
 }
 

@@ -26,7 +26,8 @@ const Explorar = () => {
             </Link>
           </div>
         </div>
-        <div className="hero-banner" aria-hidden="true" />
+        <div className="hero-banner">
+        </div>
       </section>
 
       <section className="explorar-topics">

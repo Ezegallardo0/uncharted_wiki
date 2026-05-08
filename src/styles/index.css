@@ -9,12 +9,12 @@
 
   letter-spacing: 0.18px;
   color-scheme: light dark;
+  font-family: "Quicksand", sans-serif;
 
   background: var(--bg);
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-
 }
 
 #root {

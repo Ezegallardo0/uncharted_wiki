@@ -1,61 +1,241 @@
 :root {
-  --card-bg: #f9f9f9;
-  --card-text: #000;
-  --box-shadow-color: rgba(0, 0, 0, 0.15); /* Sombra clara */
+  --page-bg: #f1efe9;
+  --card-bg: rgba(255, 255, 255, 0.95);
+  --card-text: #1c1b18;
+  --subtle-text: #5f5d57;
+  --accent: #d49b3b;
+  --accent-soft: rgba(212, 155, 59, 0.18);
+  --box-shadow-color: rgba(40, 35, 25, 0.16);
+  --border: rgba(28, 27, 24, 0.08);
 }
 
 .dark-mode {
-  --card-bg: #16171d;
-  --card-text: #fff;
-  --box-shadow-color: rgba(255, 255, 255, 0.15); /* Sombra clara */
+  --page-bg: #08111d;
+  --card-bg: rgba(18, 22, 34, 0.96);
+  --card-text: #f3f2ee;
+  --subtle-text: #b8bdd1;
+  --accent: #f1c56b;
+  --accent-soft: rgba(241, 197, 107, 0.16);
+  --box-shadow-color: rgba(0, 0, 0, 0.45);
+  --border: rgba(255, 255, 255, 0.08);
+}
+
+html, body {
+  min-height: 100%;
+  margin: 0;
+  background: radial-gradient(circle at top left, rgba(212, 155, 59, 0.14), transparent 28%),
+              radial-gradient(circle at bottom right, rgba(33, 36, 58, 0.18), transparent 32%),
+              var(--page-bg);
 }
 
 .main-card {
-  background-color: var(--card-bg);
+  position: relative;
+  font-family: "Quicksand", sans-serif;
+  background: linear-gradient(180deg, var(--card-bg) 0%, rgba(255,255,255,0.92) 100%);
   color: var(--card-text);
-  border-radius: 20px;
-  padding: 60px;
-  margin: 40px auto;
-  max-width: 1000px;
-  box-shadow: 0 6px 15px var(--box-shadow-color); /* Sombra dinámica */
+  border-radius: 26px;
+  padding: 50px 50px 40px;
+  margin: 36px auto;
+  max-width: 1100px;
+  box-shadow: 0 24px 70px -30px var(--box-shadow-color);
+  backdrop-filter: blur(10px);
+  border: 1px solid var(--border);
+  overflow: hidden;
+}
+
+.main-card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 20% 10%, var(--accent-soft), transparent 26%);
+  opacity: 0.85;
+  pointer-events: none;
+}
+
+.main-card > h1 {
+  position: relative;
+  font-size: clamp(2.4rem, 4vw, 4.2rem);
+  margin-bottom: 26px;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--card-text);
+  z-index: 1;
+}
+
+.main-card > h1::after {
+  content: "Treasure, action & legend";
+  display: block;
+  margin-top: 10px;
+  font-size: 0.95rem;
+  color: var(--subtle-text);
+  letter-spacing: 0.12em;
 }
 
 .cards-container {
+  position: relative;
   display: flex;
   flex-direction: column;
-  gap: 40px;
+  gap: 32px;
+  z-index: 1;
 }
 
 .card {
-  display: flex;
-  flex-direction: row;
-  align-items: flex-start;
-  background-color: var(--card-bg);
+  display: grid;
+  grid-template-columns: 1fr minmax(240px, 340px);
+  gap: 32px;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.9);
   color: var(--card-text);
-  border-radius: 10px;
-  padding: 30px;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border-radius: 22px;
+  padding: 32px;
+  transition: transform 0.35s ease, box-shadow 0.35s ease, background 0.35s ease;
+  box-shadow: 0 18px 50px -24px var(--box-shadow-color);
+  border: 1px solid var(--border);
+  overflow: hidden;
+  animation: cardEntrance 0.7s ease both;
+}
+
+.dark-mode .card {
+  background: rgba(16, 18, 27, 0.96);
 }
 
 .card:hover {
-  transform: translateY(-7px);
-  box-shadow: 0 10px 20px var(--box-shadow-color); /* Sombra más intensa en hover */
+  transform: translateY(-8px);
+  box-shadow: 0 30px 70px -28px var(--box-shadow-color);
+}
+
+.card-copy {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
 }
 
 .card h2 {
-  font-size: 28px;
-  margin-bottom: 10px;
+  font-size: clamp(1.8rem, 2vw, 2.7rem);
+  margin: 0;
+  line-height: 1.05;
+  letter-spacing: 0.02em;
+  text-transform: capitalize;
 }
 
 .card p {
-  font-size: 16px;
-  line-height: 1.2;
-  padding-right: 50%; /* Texto comprimido */
+  font-size: 1rem;
+  line-height: 1.7;
+  color: var(--subtle-text);
+  max-width: 100%;
+}
+
+.card-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-top: 16px;
+  color: var(--card-text);
+}
+
+.card-meta span {
+  background: rgba(255, 255, 255, 0.16);
+  color: var(--card-text);
+  padding: 10px 14px;
+  border-radius: 14px;
+  font-size: 0.95rem;
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.dark-mode .card-meta span {
+  background: rgba(255, 255, 255, 0.06);
+  border-color: rgba(255, 255, 255, 0.08);
+}
+
+.card-review {
+  margin-top: 10px;
+  font-style: italic;
+  color: var(--card-text);
+}
+
+.card-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 18px;
+  width: fit-content;
+  padding: 12px 20px;
+  background: var(--accent);
+  color: #121212;
+  font-weight: 700;
+  border-radius: 999px;
+  text-decoration: none;
+  transition: transform 0.25s ease, filter 0.25s ease;
+}
+
+.card-link:hover {
+  transform: translateY(-2px);
+  filter: brightness(0.95);
+}
+
+.card-image-wrapper {
+  position: relative;
+  display: grid;
+  place-items: center;
+  min-height: 280px;
+  border-radius: 26px;
+  background: linear-gradient(180deg, rgba(255,255,255,0.35), rgba(255,255,255,0.08));
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.12), 0 20px 60px -28px var(--box-shadow-color);
+  overflow: hidden;
+}
+
+.card-image-wrapper::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 30% 25%, rgba(255,255,255,0.4), transparent 28%);
+  opacity: 0.7;
+  pointer-events: none;
 }
 
 .card img {
-  width: 250px;
-  height: 250px;
+  width: 100%;
+  height: 100%;
   object-fit: cover;
-  margin-left: 30px;
+  border-radius: 22px;
+  transition: transform 0.45s ease, filter 0.45s ease;
+  transform: translateZ(0);
+}
+
+.card:hover img {
+  transform: scale(1.04);
+  filter: saturate(1.05);
+}
+
+.card-image-wrapper:hover {
+  transform: translateY(-2px);
+}
+
+@keyframes cardEntrance {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 850px) {
+  .card {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 560px) {
+  .main-card {
+    padding: 30px 24px 28px;
+  }
+
+  .card {
+    padding: 24px;
+    gap: 24px;
+  }
 }

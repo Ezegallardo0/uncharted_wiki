@@ -7,7 +7,7 @@
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
-    "deploy": "gh-pages -d dist -r https://github.com/Ezegallardo0/uncharted_wiki.git"
+    "deploy": "gh-pages -d dist --repo https://github.com/Ezegallardo0/uncharted_wiki.git"
   },
   "dependencies": {
     "react": "^19.2.5",

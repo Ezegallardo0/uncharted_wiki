@@ -37,7 +37,7 @@ const Footer = () => {
       </div>
 
       <div className="footer-base">
-        <span>© 2026 Uncharted Wiki | J. Ezequiel Gallardo</span>
+        <span>© 2026 Uncharted Wiki | <a className="jeg" href="https://ezegallardo0.github.io/PortFolio/">J. Ezequiel Gallardo</a></span>
         <span>Hecho para fans con un estilo moderno y accesible.</span>
       </div>
     </footer>

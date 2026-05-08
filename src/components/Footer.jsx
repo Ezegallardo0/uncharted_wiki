@@ -11,15 +11,21 @@ const Footer = () => {
         <div className="footer-brand">
           <p className="footer-title">Uncharted Wiki</p>
           <p className="footer-copy">
-            Tu rincón para descubrir lore, reseñas y aventuras de la saga Uncharted.
+            Tu rincón para descubrir lore, reseñas y secretos de la saga Uncharted.
           </p>
+          <ul className="footer-highlight">
+            <li>Guías rápidas de cada entrega</li>
+            <li>Personajes, coleccionables y mapas</li>
+            <li>Curiosidades, easter eggs y teoría</li>
+          </ul>
         </div>
 
         <div className="footer-links">
           <h4>Enlaces rápidos</h4>
-          <Link to="/">Inicio</Link>
-          <Link to={`/juego/${featured.slug}`}>{featured.title}</Link>
+          <Link to="/explorar">Explorar la saga</Link>
+          <Link to={`/juego/${featured.slug}`}>Análisis: {featured.title}</Link>
           <Link to="/juego/lost-legacy">The Lost Legacy</Link>
+          <Link to="/">Inicio y novedades</Link>
         </div>
 
         <div className="footer-widget">
@@ -31,7 +37,7 @@ const Footer = () => {
       </div>
 
       <div className="footer-base">
-        <span>© 2026 Uncharted Wiki</span>
+        <span>© 2026 Uncharted Wiki | J. Ezequiel Gallardo</span>
         <span>Hecho para fans con un estilo moderno y accesible.</span>
       </div>
     </footer>

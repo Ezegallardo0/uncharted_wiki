@@ -4,10 +4,10 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-  "dev": "vite",
-  "build": "vite build",
-  "deploy": "gh-pages -d dist"
-},
+    "dev": "vite",
+    "build": "vite build",
+    "deploy": "echo \"no gh-pages\""
+  },
   "dependencies": {
     "react": "^19.2.5",
     "react-dom": "^19.2.5",

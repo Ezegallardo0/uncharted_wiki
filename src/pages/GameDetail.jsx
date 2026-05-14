@@ -3,6 +3,7 @@ import { juegos } from "../components/juegos";
 import Menu from "../components/nav";
 import Footer from "../components/Footer";
 import "../styles/game.css";
+import { colecciones } from "../components/trofeos";
 
 const GameDetail = () => {
   const { slug } = useParams();

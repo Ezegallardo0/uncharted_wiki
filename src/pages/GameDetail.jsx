@@ -15,13 +15,15 @@ const GameDetail = () => {
     return (
       <div className="detail-page">
         <Menu />
-        <main className="detail-page__content">
-          <h2>Juego no encontrado</h2>
-          <p>Lo sentimos, no se encontró la aventura solicitada.</p>
-          <Link className="button-back" to="/">
-            Volver al inicio
-          </Link>
-        </main>
+        <div style={{ paddingTop: '70px' }}>
+          <main className="detail-page__content">
+            <h2>Juego no encontrado</h2>
+            <p>Lo sentimos, no se encontró la aventura solicitada.</p>
+            <Link className="button-back" to="/">
+              Volver al inicio
+            </Link>
+          </main>
+        </div>
       </div>
     );
   }
@@ -29,29 +31,30 @@ const GameDetail = () => {
   return (
     <div className="detail-page">
       <Menu />
-      <main className="detail-page__content">
-        <div className="detail-header">
-          <div className="detail-title">
-            <span className="detail-tag">{juego.genero}</span>
-            <h2>{juego.title}</h2>
-            <p>{juego.descripcion}</p>
-            <div className="detail-stats">
-              <span><strong>Año:</strong> {juego.year}</span>
-              <span><strong>Plataforma:</strong> {juego.plataforma}</span>
-              <span><strong>Rating:</strong> {juego.rating} ⭐</span>
+      <div style={{ paddingTop: '70px' }}>
+        <main className="detail-page__content">
+          <div className="detail-header">
+            <div className="detail-title">
+              <span className="detail-tag">{juego.genero}</span>
+              <h2>{juego.title}</h2>
+              <p>{juego.descripcion}</p>
+              <div className="detail-stats">
+                <span><strong>Año:</strong> {juego.year}</span>
+                <span><strong>Plataforma:</strong> {juego.plataforma}</span>
+                <span><strong>Rating:</strong> {juego.rating}/5 ★</span>
+              </div>
+              <p className="detail-summary">{juego.reviewSummary}</p>
+              {juego.fullDescription.map((paragraph, index) => (
+                <p key={index} className="detail-paragraph">{paragraph}</p>
+              ))}
+              <Link className="button-back" to="/">
+                Volver a la saga
+              </Link>
             </div>
-            <p className="detail-summary">{juego.reviewSummary}</p>
-            {juego.fullDescription.map((paragraph, index) => (
-              <p key={index} className="detail-paragraph">{paragraph}</p>
-            ))}
-            <Link className="button-back" to="/">
-              Volver a la saga
-            </Link>
+            <div className="detail-hero-image">
+              <img src={juego.img} alt={juego.title} />
+            </div>
           </div>
-          <div className="detail-hero-image">
-            <img src={juego.img} alt={juego.title} />
-          </div>
-        </div>
 
         <section className="detail-entities">
           <article>
@@ -129,6 +132,7 @@ const GameDetail = () => {
           </div>
         </section>
       </main>
+      </div>
 
       <section className="detail-navigation">
         <div className="nav-buttons">

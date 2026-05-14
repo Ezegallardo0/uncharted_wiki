@@ -7,9 +7,11 @@ const Inicio = () => {
   return (
     <div>
       <Menu />
-      <WidgetHome />
-      <Card1 />
-      <Footer />
+      <div style={{ paddingTop: '70px' }}>
+        <WidgetHome />
+        <Card1 />
+        <Footer />
+      </div>
     </div>
   )
 }

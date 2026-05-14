@@ -29,10 +29,12 @@ const Footer = () => {
         </div>
 
         <div className="footer-widget">
-          <h4>Dato destacado</h4>
-          <span className="widget-badge">Top elección</span>
-          <p className="widget-text">{featured.reviewSummary}</p>
-          <p className="widget-small">Explora este título para ver más detalles y curiosidades de la saga.</p>
+          <h4>¿Sabías qué?</h4>
+          <span className="widget-badge">Curiosidad</span>
+          <p className="widget-text">
+            En la saga Uncharted hay más de 200 objetos coleccionables y secretos ocultos que solo los exploradores más atentos logran descubrir.
+          </p>
+          <p className="widget-small">Sigue explorando para encontrar guías, mapas y detalles exclusivos de cada entrega.</p>
         </div>
       </div>
 

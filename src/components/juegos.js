@@ -37,7 +37,8 @@ export const juegos = [
       { img: "https://mansiondominator.wordpress.com/wp-content/uploads/2011/11/flashback-uncharted-3-dlc.jpg", caption: "Entrada oculta en la selva" },
       { img: "https://i.ytimg.com/vi/LShXpMgwtIE/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLBmG220RiZbPu04cP54NvtnnkCMWQ", caption: "Ruinas misteriosas" }
     ],
-    img: "https://m.media-amazon.com/images/M/MV5BMzBhYzc4NjUtMmIzMS00YWVlLTg0MTgtNmE0MDUwZDliODJjXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg",img1:"https://images.pushsquare.com/af9d1797dd552/large.jpg"
+    img: "https://m.media-amazon.com/images/M/MV5BMzBhYzc4NjUtMmIzMS00YWVlLTg0MTgtNmE0MDUwZDliODJjXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg",img1:"https://images.pushsquare.com/af9d1797dd552/large.jpg",
+    img2:"https://gaming-cdn.com/images/products/15888/orig/uncharted-drake-s-fortune-remake-pc-juego-cover.jpg?v=1749197865"
   },
   {
     slug: "among-thieves",
@@ -79,7 +80,8 @@ export const juegos = [
       { img: "https://static.wikia.nocookie.net/uncharted/images/6/6a/Shambhala.png/revision/latest?cb=20260214060021", caption: "Las murallas de Shambhala" },
       { img: "https://i.ytimg.com/vi/mVNxI86vLKI/maxresdefault.jpg", caption: "Aventureros en el ferrocarril" }
     ],
-    img: "https://m.media-amazon.com/images/M/MV5BYzAxNDY2NjktNTI0Yi00NmJjLTkyMjYtNDk2ZGZkZTg0ZTg2XkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg", img1:"https://www.outoflives.net/wp-content/uploads/2022/01/Revisiting-Uncharted-2-Among-Thieves.jpg"
+    img: "https://m.media-amazon.com/images/M/MV5BYzAxNDY2NjktNTI0Yi00NmJjLTkyMjYtNDk2ZGZkZTg0ZTg2XkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg", img1:"https://www.outoflives.net/wp-content/uploads/2022/01/Revisiting-Uncharted-2-Among-Thieves.jpg",
+    img2:"https://i.ytimg.com/vi/Sy7egE6CcVs/maxresdefault.jpg"
   },
   {
     slug: "drakes-deception",
@@ -120,7 +122,7 @@ export const juegos = [
       { img: "https://img.asmedia.epimg.net/resizer/v2/https%3A%2F%2Fstatic.prisa.com%2Fgamepedia%2Fimagenes%2F2021%2F11%2F27%2Fheader_image%2F11418911638037701.jpg?auth=7b40499c8ccc3801e28917b67ee934a241885c8b51b3b664b86bf91ac3dea4f1&width=480&height=250&smart=true", caption: "Desierto 'Rub Al Khali'" },
       { img: "https://static.wikia.nocookie.net/uncharted/images/7/72/Oasis_panorama.jpg/revision/latest?cb=20120505174458", caption: "Oasis oculto" }
     ],
-    img: "https://static.wikia.nocookie.net/doblaje/images/c/c2/Uncharted_3_Drake%27s_Deception.jpg/revision/latest?cb=20240209234028&path-prefix=es",img1:"https://i.ytimg.com/vi/E8hIk2_uoGk/maxresdefault.jpg"
+    img: "https://static.wikia.nocookie.net/doblaje/images/c/c2/Uncharted_3_Drake%27s_Deception.jpg/revision/latest?cb=20240209234028&path-prefix=es",img1:"https://i.ytimg.com/vi/E8hIk2_uoGk/maxresdefault.jpg", img2:"https://assets.altarofgaming.com/wp-content/uploads/2023/09/uncharted-3-drakes-deception-game-cover-altar-of-gaming.png"
   },
   {
     slug: "a-thiefs-end",
@@ -170,7 +172,7 @@ export const juegos = [
       {img:"https://c.wallhere.com/photos/9d/8b/video_games_PlayStation_4_Uncharted_4-1766469.jpg!d", caption:"La Costa Maldita"},
       {img:"https://oyster.ignimgs.com/mediawiki/apis.ign.com/uncharted-4/4/4c/Ch08_Grave_01-3.jpg", caption:"Tumba de Henry Avery"}
     ],
-    img: "https://static.wikia.nocookie.net/doblaje/images/6/64/Uncharted_4_A_Thief%27s_End.jpg/revision/latest?cb=20230827200815&path-prefix=es", img1:"https://www.lowyat.net/wp-content/uploads/2016/05/Uncharted-4_-A-Thief’s-End™_20160515053812.jpg"
+    img: "https://static.wikia.nocookie.net/doblaje/images/6/64/Uncharted_4_A_Thief%27s_End.jpg/revision/latest?cb=20230827200815&path-prefix=es", img1:"https://www.lowyat.net/wp-content/uploads/2016/05/Uncharted-4_-A-Thief’s-End™_20160515053812.jpg", img2:"https://blog.monsternotebook.com.tr/wp-content/uploads/Uncharted-4-A-Thiefs-End-Sistem-Gereksinimleri-.jpg"
   },
   {
     slug: "The lost-legacy",
@@ -210,6 +212,6 @@ export const juegos = [
       { img: "https://i.ytimg.com/vi/9TMuYKQL-pg/maxresdefault.jpg", caption: "Entrando al templo" },
       { img: "https://i.ytimg.com/vi/Dn_jjYG69wA/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLCdaaKYHFMVDfDsA-FZ7q9d0-x_dA", caption: "El Guardián Perdido" }
     ],
-    img: "https://image.api.playstation.com/vulcan/img/rnd/202010/2813/h9Xc7ZhCEGUcS05YvpEcNT0D.png", img1:"https://s.yimg.com/ny/api/res/1.2/laEErKSk_SXjERy2OBP5Sw--/YXBwaWQ9aGlnaGxhbmRlcjt3PTEyNDI7aD02OTg7Y2Y9d2VicA--/https://s.yimg.com/os/en_US/News/BGR_News/uncharted-the-lost-legacy.jpg?quality=98&strip=all"
+    img: "https://image.api.playstation.com/vulcan/img/rnd/202010/2813/h9Xc7ZhCEGUcS05YvpEcNT0D.png", img1:"https://s.yimg.com/ny/api/res/1.2/laEErKSk_SXjERy2OBP5Sw--/YXBwaWQ9aGlnaGxhbmRlcjt3PTEyNDI7aD02OTg7Y2Y9d2VicA--/https://s.yimg.com/os/en_US/News/BGR_News/uncharted-the-lost-legacy.jpg?quality=98&strip=all", img2:"https://i.ytimg.com/vi_webp/iXxQAulmHh0/maxresdefault.webp"
   }
 ];

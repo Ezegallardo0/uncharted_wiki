@@ -4,7 +4,9 @@
   gap: 12px;
   font-family: "Quicksand", sans-serif;
   width: 90%;
-  padding-left: 7rem;
+  max-width: 500px;
+  margin: 0 auto;
+  padding-left: 0;
 }
 
 .search-input {

@@ -1,13 +1,10 @@
 import { Link } from "react-router-dom";
-import Menu from "../components/nav";
-import Footer from "../components/Footer";
 import { juegos } from "../components/juegos";
 import "../styles/explorar.css";
 
 const Explorar = () => {
   return (
     <div className="explorar-page">
-      <Menu />
 
       <section className="explorar-hero">
         <div className="hero-copy">
@@ -72,8 +69,6 @@ const Explorar = () => {
           ))}
         </div>
       </section>
-
-      <Footer />
     </div>
   );
 };

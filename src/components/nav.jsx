@@ -14,6 +14,7 @@ const Menu = () => {
   const [buyOpen, setBuyOpen] = useState(false);
   const [platformChoice, setPlatformChoice] = useState("none");
 
+  
   const closeBuyModal = () => {
     setBuyOpen(false);
     setPlatformChoice("none");
@@ -36,6 +37,8 @@ const Menu = () => {
 
       <button
         className="menu-toggle"
+        aria-controls="primary-navigation"
+        aria-expanded={menuOpen}
         onClick={() => {
           if (menuOpen) {
             setDropdownOpen(false);
@@ -49,7 +52,7 @@ const Menu = () => {
         <span />
       </button>
 
-      <nav className={`nav ${menuOpen ? "open" : ""}`}>
+      <nav id="primary-navigation" className={`nav ${menuOpen ? "open" : ""}`}>
         <ul>
           <li>
             <Link className="link-underline" to="/" onClick={() => setMenuOpen(false)}>

@@ -205,6 +205,117 @@ body {
   border-color: rgba(255, 255, 255, 0.28);
 }
 
+@media (max-width: 900px) {
+  .menu {
+    padding: 16px 20px;
+    gap: 12px;
+    flex-wrap: wrap;
+  }
+
+  .menu-toggle {
+    display: grid !important;
+  }
+
+  .container {
+    display: none;
+  }
+
+  .nav {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background: var(--surface);
+    border-top: 1px solid var(--border);
+    padding: 16px 20px 24px;
+    transform: translateY(-12px);
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    flex-direction: column;
+    gap: 16px;
+    z-index: 110;
+    box-shadow: 0 24px 40px rgba(0, 0, 0, 0.12);
+    transition: transform 0.3s ease, opacity 0.3s ease, visibility 0.3s ease;
+  }
+
+  .nav.open {
+    transform: translateY(0);
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+  }
+
+  .nav ul {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .nav li {
+    width: 100%;
+  }
+
+  .link-underline,
+  .dropbtn,
+  .buy-link {
+    width: 100%;
+    text-align: left;
+    display: block;
+    padding: 12px 14px;
+    border-radius: 14px;
+  }
+
+  .link-underline:hover,
+  .dropbtn:hover,
+  .buy-link:hover {
+    background: rgba(255, 255, 255, 0.1);
+  }
+
+  .dropdown .content {
+    position: static;
+    top: auto;
+    left: auto;
+    width: 100%;
+    box-shadow: none;
+    transform: none;
+    opacity: 1;
+    pointer-events: auto;
+    display: none;
+    padding: 0;
+    margin-top: 8px;
+    background: transparent;
+    border-radius: 0;
+  }
+
+  .dropdown.open .content {
+    display: block;
+  }
+
+  .content a {
+    display: block;
+    padding: 10px 14px;
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.08);
+    margin-bottom: 8px;
+  }
+
+  .content a:last-child {
+    margin-bottom: 0;
+  }
+
+  .mobile-theme-toggle {
+    display: flex;
+    justify-content: flex-start;
+  }
+
+  .dropdown:hover .content,
+  .dropdown:focus-within .content {
+    opacity: 1;
+    transform: none;
+    pointer-events: auto;
+  }
+}
+
 .Tema svg {
   width: 22px;
   height: 22px;

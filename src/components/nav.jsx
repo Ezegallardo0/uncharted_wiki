@@ -34,7 +34,7 @@ const Menu = () => {
           className="img"
         />
       </Link>
-
+      
       <button
         className="menu-toggle"
         aria-controls="primary-navigation"
@@ -53,6 +53,16 @@ const Menu = () => {
       </button>
 
       <nav id="primary-navigation" className={`nav ${menuOpen ? "open" : ""}`}>
+        <div className="nav-header">
+          <button
+            type="button"
+            className="close-menu"
+            onClick={() => setMenuOpen(false)}
+            aria-label="Cerrar menú"
+          >
+            ×
+          </button>
+        </div>
         <ul>
           <li>
             <Link className="link-underline" to="/" onClick={() => setMenuOpen(false)}>
@@ -144,6 +154,7 @@ const Menu = () => {
           </button>
         </div>
       </nav>
+      <div className={`backdrop ${menuOpen ? "open" : ""}`} onClick={() => setMenuOpen(false)} />
       <div className="container">
         <button className="Tema" onClick={() => setDark((prev) => !prev)}>
           {dark ? (

@@ -1,8 +1,10 @@
 .explorar-page {
   min-height: 100vh;
+  width: 100%;
   background: radial-gradient(circle at top left, rgba(212, 155, 59, 0.12), transparent 24%),
     radial-gradient(circle at bottom right, rgba(20, 30, 48, 0.22), transparent 30%),
     var(--bg);
+  overflow-x: clip;
 }
 
 .explorar-hero {

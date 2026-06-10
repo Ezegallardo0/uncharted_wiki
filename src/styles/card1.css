@@ -27,8 +27,10 @@
 }
 
 html, body {
+  width: 100%;
   background: var(--page-bg);
   color: var(--card-text);
+  overflow-x: clip;
 }
 
 .saga-explorer {

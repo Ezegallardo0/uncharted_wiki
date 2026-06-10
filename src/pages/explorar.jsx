@@ -24,7 +24,6 @@ const Explorar = () => {
           </div>
         </div>
         <div className="hero-banner">
-          <img src="https://img.hype.games/cdn/b0dfa36a-0e69-491a-8808-8e945919178631899bf8-52f5-469a-a201-6117e3340d10[Nexway]-UNCHARTED-Legacy-of-Thieves-Collection_Cover.png" alt="Uncharted Legacy of Thieves" />
         </div>
       </section>
 

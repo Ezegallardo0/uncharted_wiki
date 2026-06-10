@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "deploy": "echo \"no gh-pages\""
+    "deploy": "gh-pages -d dist"
   },
   "dependencies": {
     "react": "^19.2.5",

@@ -3,5 +3,5 @@ import react from '@vitejs/plugin-react'
 
 export default defineConfig({
   plugins: [react()],
-  base: '/uncharted_wiki/',
+  base: '/uncharted_wiki/'
 })

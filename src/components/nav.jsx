@@ -74,6 +74,11 @@ const Menu = () => {
               Explorar
             </Link>
           </li>
+          <li>
+            <Link className="link-underline" to="/contacto" onClick={() => setMenuOpen(false)}>
+              Contacto
+            </Link>
+          </li>
           <li className={`dropdown ${dropdownOpen ? "open" : ""}`}>
             <button
               className="dropbtn"

@@ -3,6 +3,7 @@
 :root {
   --bg: #f7f1e9;
   --text: #1c1b18;
+  --text-rgb: 28, 27, 24;
   --surface: rgba(255, 255, 255, 0.92);
   --surface-strong: rgba(255, 255, 255, 0.97);
   --border: rgba(28, 27, 24, 0.12);
@@ -11,6 +12,7 @@
 .dark-mode {
   --bg: #091221;
   --text: #f3f2ee;
+  --text-rgb: 243, 242, 238;
   --surface: rgba(18, 22, 34, 0.92);
   --surface-strong: rgba(24, 28, 42, 0.96);
   --border: rgba(255, 255, 255, 0.08);

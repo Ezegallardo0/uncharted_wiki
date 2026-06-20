@@ -3,6 +3,7 @@ import './styles/App.css'
 import Inicio from './pages/home'
 import GameDetail from './pages/GameDetail'
 import Card1 from './components/C_uncharted1'
+import Contacto from './pages/contacto'
 
 function App() {
   return (
@@ -10,6 +11,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Inicio/>} />
         <Route path="/explorar" element={<Card1/>} />
+        <Route path="/contacto" element={<Contacto/>} />
         <Route path="/juego/:slug" element={<GameDetail/>} />
       </Routes>
     </>

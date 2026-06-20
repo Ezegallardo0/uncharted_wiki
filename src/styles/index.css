@@ -1,5 +1,7 @@
 :root {
   --bg: #16171d;
+  --text: #f3f2ee;
+  --text-rgb: 243, 242, 238;
   --code-bg: #f4f3ec;
   --accent: #d4853f;
   --accent-bg: rgba(212, 133, 63, 0.1);

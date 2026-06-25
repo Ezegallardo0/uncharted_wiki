@@ -1,5 +1,6 @@
 import { useState } from "react";
 import Menu from "../components/nav";
+import Footer from "../components/Footer";
 import "../styles/contacto.css";
 
 const Contacto = () => {
@@ -70,6 +71,7 @@ const Contacto = () => {
           </form>
         </section>
       </main>
+      <Footer />
     </div>
   );
 };

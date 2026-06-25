@@ -37,7 +37,7 @@ export const juegos = [
       { img: "https://mansiondominator.wordpress.com/wp-content/uploads/2011/11/flashback-uncharted-3-dlc.jpg", caption: "Entrada oculta en la selva" },
       { img: "https://i.ytimg.com/vi/LShXpMgwtIE/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLBmG220RiZbPu04cP54NvtnnkCMWQ", caption: "Ruinas misteriosas" }
     ],
-    img: "https://m.media-amazon.com/images/M/MV5BMzBhYzc4NjUtMmIzMS00YWVlLTg0MTgtNmE0MDUwZDliODJjXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg",img1:"https://images.pushsquare.com/af9d1797dd552/large.jpg",
+    img: "https://m.media-amazon.com/images/M/MV5BMzBhYzc4NjUtMmIzMS00YWVlLTg0MTgtNmE0MDUwZDliODJjXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg",img1:"https://static0.polygonimages.com/wordpress/wp-content/uploads/chorus/uploads/chorus_asset/file/19933147/Uncharted_Drakes_Fortune_Chapter_13_treasure_1.jpg",
     img2:"https://gaming-cdn.com/images/products/15888/orig/uncharted-drake-s-fortune-remake-pc-juego-cover.jpg?v=1749197865"
   },
   {
